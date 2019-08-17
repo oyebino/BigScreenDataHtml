@@ -1,0 +1,137 @@
+html,
+body {
+	height: 100%;
+}
+body {
+	background: #1d2339;
+	font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
+		sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: lighten(#1d2339, 8%);
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+	display: flex;
+	padding-left: 20px;
+}
+
+.content {
+	padding: 20px;
+	flex: 1;
+	display: flex;
+	overflow: hidden;
+	.page-left-bd {
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+
+		.left-top-status {
+			height: 165px;
+			margin-bottom: 20px;
+			background: lighten(#1d2339, 15%);
+			display: flex;
+			flex-direction: column;
+			.status-box {
+				flex: 1;
+				display: flex;
+			}
+			.status-item {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+				color: #fff;
+				.title {
+					font-size: 18px;
+				}
+				.count {
+					margin-top: 14px;
+					font-size: 42px;
+					color: #fed93d;
+				}
+			}
+		}
+		.left-bottom-bd {
+			flex: 1;
+			background: lighten(#1d2339, 15%);
+			display: flex;
+			flex-direction: column;
+			.items-box {
+				flex: 1;
+				display: flex;
+				flex-wrap: wrap;
+				.item {
+					width: 50%;
+					height: 50%;
+				}
+			}
+		}
+	}
+	.page-right-bd {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		margin-left: 20px;
+		.right-top-bd {
+			flex: 1.5;
+			margin-bottom: 20px;
+			background: lighten(#1d2339, 15%);
+			display: flex;
+			flex-direction: column;
+			.items-box {
+				flex: 1;
+				display: flex;
+				flex-wrap: wrap;
+				.item {
+					width: 33%;
+					height: 50%;
+				}
+			}
+		}
+		.right-bottom-bd {
+			flex: 1;
+			background: lighten(#1d2339, 15%);
+			display: flex;
+			flex-direction: column;
+			.item-block {
+				flex: 1;
+			}
+		}
+	}
+}
+
+.block-title {
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+	color: #fff;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 10px;
+		height: 15px;
+		background: #fff;
+	}
+}
