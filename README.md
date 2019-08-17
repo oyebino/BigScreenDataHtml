@@ -77,7 +77,7 @@ node_modules: 　　　　    安装依赖后存放的文件
 
 - 逻辑部分
 
-- ```
+```
   <script>
     export default {
       name: 'HelloWorld',
@@ -90,7 +90,7 @@ node_modules: 　　　　    安装依赖后存放的文件
   </script>
   ```
 
-  样式部分
+- 样式部分
 
 ```
 <style scoped>
