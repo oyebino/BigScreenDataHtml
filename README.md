@@ -34,7 +34,7 @@
 4. 启动项目
 
    ```
-   npm run dev
+   npm run start
    ```
 
 5. 打包

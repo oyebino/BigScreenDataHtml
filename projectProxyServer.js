@@ -10,7 +10,7 @@ const bundler = new Bundler('public/index.html', {
 const app = express();
 
 var apiProxy = proxy(['/testTask', '/bugSeverity', '/bugStatus', '/autoTestReport'], {
-	target: 'http://10.10.18.66:5000',
+	target: 'http://127.0.0.1:5000',
 	changeOrigin: true
 });
 
