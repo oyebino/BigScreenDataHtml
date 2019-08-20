@@ -1,6 +1,6 @@
 <template>
 	<div class="right-top-bd" v-if="formatChartData.length">
-		<div class="block-title">版本bug严重程序汇总</div>
+		<div class="block-title">版本bug严重程度汇总</div>
 		<div class="items-box">
 			<div class="item" v-for="item in formatChartData" :key = "item.id">
 				<ve-histogram
@@ -43,7 +43,7 @@ export default {
 						});
 					}
 				}
-				const levelStep = ["建议", "轻微", "一般", "严重", "极其严重"]
+				const levelStep = ["极其严重", "严重", "一般", "轻微", "建议"]
 				let formatRow = []
 				levelStep.forEach(sitem => {
 					let item = row.find(item => item['等级'] === sitem) 
