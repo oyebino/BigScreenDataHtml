@@ -26,6 +26,7 @@ export default {
 				stack: { 状态: ['激活', '已关闭', '已解决'] }
 			},
 			chartExtend: {
+				color:['#91D52B','#EEEE11','#EB7A7A'],
 				title: {
 					text: '版本bug状态汇总',
 					x: 'center',
@@ -43,12 +44,18 @@ export default {
 					bottom: 15
 				},
 				legend: {
-					show: false
+					textStyle:{
+						color:'#FFFFEE'
+					},
+					bottom:'auto',
+					right: '10px',
+					show: true,
+					data:['已关闭', '已解决', '激活']
 				},
-				// series: {
-				// 	label: { show: true, position: 'top' },
-				// 	barWidth: 25
-				// },
+				series: {
+					label: { show: false, position: 'top' },
+					barWidth: 48,
+				},
 				textStyle: {
 					color: '#fff'
 				},
@@ -83,7 +90,6 @@ export default {
 				}
 				formatChartData.rows.push(o);
 			}
-
 			this.formatChartData = formatChartData;
 		}
 	}

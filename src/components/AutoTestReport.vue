@@ -49,6 +49,7 @@ export default {
 						rows: row
 					},
 					chartExtend: {
+						color:['#BDA9A9','#ff4444','#FFD700','#91EB7A'],
 						title: {
 							text: key,
 							x: 'center',

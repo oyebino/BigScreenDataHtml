@@ -55,6 +55,7 @@ export default {
 						rows: formatRow
 					},
 					chartExtend: {
+						color:['#EED3AA'],
 						title: {
 							text: key,
 							x: 'center',
@@ -83,7 +84,7 @@ export default {
 							axisLabel: {
 								rotate: 30,
 								margin: 12
-							}
+							},
 						}
 					}
 				});

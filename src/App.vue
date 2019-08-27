@@ -10,19 +10,19 @@
 							<div class="title">{{ name }}</div>
 							<div class="count">{{ value }}</div>
             </div>-->
-            <div class="status-item" >
+            <div class="status-item">
               <div class="title">进行中</div>
               <div class="count">{{ testStatus.进行中 }}</div>
             </div>
-			<div class="status-item" >
+            <div class="status-item">
               <div class="title">未开始</div>
               <div class="count">{{ testStatus.未开始 }}</div>
             </div>
-			<div class="status-item" >
+            <div class="status-item">
               <div class="title">全部</div>
               <div class="count">{{ testStatus.全部 }}</div>
             </div>
-			<div class="status-item" >
+            <div class="status-item">
               <div class="title">已完成</div>
               <div class="count">{{ testStatus.已完成 }}</div>
             </div>
