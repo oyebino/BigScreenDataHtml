@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <div class="header">艾科测试监控平台</div>
+    <div id="appLoading" v-show="isLoad">
+      <img src="static/timg.gif" />
+    </div>
+    <div class="header">
+      艾科测试监控平台
+      <div id="show-time">{{ date | formatDate }}</div>
+    </div>
     <div class="content">
       <div class="page-left-bd">
         <div class="left-top-status" v-if="testStatus">
@@ -52,21 +58,47 @@ export default {
   },
   data() {
     return {
+      date: new Date(),
+      isLoad: true,
       testStatus: null,
       bugSeverity: null,
       bugStatus: null,
       autoTestReport: null
     };
   },
+  filters:{
+    formatDate(date1){
+      let year=date1.getFullYear();
+      let month=date1.getMonth()+1;
+      let day=date1.getDate();
+      let hours=date1.getHours();
+      let minutes=date1.getMinutes();
+      let seconds=date1.getSeconds();
+      return year+"/"+month+"/"+day+" "+hours+":"+minutes+":"+seconds;
+    }
+  },
   created() {
     this.getInitData();
   },
   mounted() {
+    let _this = this;
+    this.timer = setInterval(() => {
+      _this.date = new Date();
+
+    }, 1000);
     setTimeout(() => {
       this.getInitData();
     }, 60 * 60 * 1000);
   },
+  beforeDestroy() {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
+  },
   methods: {
+    padDate(){
+      return value <10 ? '0' + value:value;
+    },
     async getInitData() {
       const [
         testStatus,
@@ -79,7 +111,7 @@ export default {
         this.getBugStatus(),
         this.getAutoTestReport()
       ]);
-
+      this.isLoad = false;
       this.testStatus = [testStatus, bugSeverity, bugStatus, autoTestReport][0];
       this.bugSeverity = [
         testStatus,

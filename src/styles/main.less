@@ -42,9 +42,19 @@ body {
 		.left-top-status {
 			height: 165px;
 			margin-bottom: 20px;
-			background: lighten(#1d2339, 15%);
 			display: flex;
 			flex-direction: column;
+			background: linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom;
+			background-repeat: no-repeat;
+			background-size: 2px 15px, 15px 2px;
+			background-color: lighten(#1d2339, 15%);
 			.status-box {
 				flex: 1;
 				display: flex;
@@ -68,9 +78,19 @@ body {
 		}
 		.left-bottom-bd {
 			flex: 1;
-			background: lighten(#1d2339, 15%);
 			display: flex;
 			flex-direction: column;
+			background: linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom;
+			background-repeat: no-repeat;
+			background-size: 2px 15px, 15px 2px;
+			background-color: lighten(#1d2339, 15%);
 			.items-box {
 				flex: 1;
 				display: flex;
@@ -90,9 +110,19 @@ body {
 		.right-top-bd {
 			flex: 1.5;
 			margin-bottom: 20px;
-			background: lighten(#1d2339, 15%);
 			display: flex;
 			flex-direction: column;
+			background: linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom;
+			background-repeat: no-repeat;
+			background-size: 2px 15px, 15px 2px;
+			background-color: lighten(#1d2339, 15%);
 			.items-box {
 				flex: 1;
 				display: flex;
@@ -105,9 +135,19 @@ body {
 		}
 		.right-bottom-bd {
 			flex: 1;
-			background: lighten(#1d2339, 15%);
 			display: flex;
 			flex-direction: column;
+			background: linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) left top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) right top,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) left bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom,
+						linear-gradient(#6C85E8, #6C85E8) right bottom;
+			background-repeat: no-repeat;
+			background-size: 2px 15px, 15px 2px;
+			background-color: lighten(#1d2339, 15%);
 			.item-block {
 				flex: 1;
 			}
@@ -127,7 +167,7 @@ body {
 	&::before {
 		content: '';
 		position: absolute;
-		left: 0;
+		left: 3px;
 		top: 50%;
 		transform: translateY(-50%);
 		width: 10px;
@@ -139,4 +179,30 @@ body {
 /* 旋转效果 */
 .demo-spin-icon-load{
     animation: ani-demo-spin 1s linear infinite;
+}
+
+#appLoading { position: absolute;width: 100%; height: 100%;z-index: 10;background-color: rgba(187, 187, 187, 0.4)}
+#appLoading img {
+	display: block;
+	font-size: 50px;
+	line-height: 50px;
+	top: 50%;
+	left: 50%;
+	width: 280px;
+	height: 150px;
+	-webkit-transform: translateY(-50%)  translateX(-50%);
+	transform: translateY(-50%)  translateX(-50%);
+	color: aqua;
+	position: relative;
+	}
+
+#show-time{
+	font-size: 15px;
+	width:250px;
+	height:40px;
+	// border:3px dotted #3F60E2;
+	border-radius:25px;
+	margin-left:70%;
+	margin-top: 0.5%;
+	text-align:center;
 }
