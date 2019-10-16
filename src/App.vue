@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div id="appLoading" v-show="isLoad">
-      <img src="static/timg.gif" />
+      <!-- <img src="./static/timg.gif" /> -->
+      <span class = "demo">Loading...</span>
     </div>
     <div class="header">
       艾科测试监控平台
@@ -88,7 +89,7 @@ export default {
     }, 1000);
     setTimeout(() => {
       this.getInitData();
-    }, 60 * 60 * 1000);
+    }, 20 * 1000);
   },
   beforeDestroy() {
     if (this.timer) {
@@ -96,9 +97,6 @@ export default {
     }
   },
   methods: {
-    padDate(){
-      return value <10 ? '0' + value:value;
-    },
     async getInitData() {
       const [
         testStatus,
